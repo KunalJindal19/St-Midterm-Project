@@ -1,0 +1,1 @@
+<OPEN>"abc"$"d"<CLOSE><OPEN>"abc"<CLOSE><OPEN>"hello"$"e"<CLOSE><OPEN>"hllo"<CLOSE><OPEN>"abcda"$"a"<CLOSE><OPEN>"bcd"<CLOSE>

@@ -1,0 +1,70 @@
+{
+  "task_id": 11,
+  "function": "remove_Occ(s, ch)",
+  "coverage_criterion": "Prime Path Coverage",
+  "verdict": "PASS",
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "errors": 0,
+    "timeouts": 0,
+    "invalid": 0
+  },
+  "coverage": {
+    "target_criterion": "Prime Path Coverage",
+    "criterion_met": true,
+    "node": "6/6 (100.0%)",
+    "edge": "7/7 (100.0%)",
+    "edge_pair": "5/5 (100.0%)",
+    "prime_path": "3/3 (100.0%)",
+    "cfg": {
+      "nodes": {
+        "1": "lines 2-4: first = s.find(ch); last = s.rfind(ch); if first == -1:",
+        "2": "line 5: return s",
+        "3": "line 6: if first == last:",
+        "4": "line 7: return s[:first] + s[first+1:]",
+        "5": "line 9: return s[:first] + s[first+1:last] + s[last+1:]",
+        "6": "exit"
+      },
+      "edges": [[1, 2], [1, 3], [2, 6], [3, 4], [3, 5], [4, 6], [5, 6]],
+      "initial_node": 1,
+      "final_node": 6
+    }
+  },
+  "test_cases": [
+    {
+      "id": 1,
+      "input": ["'abc'", "'d'"],
+      "expected": "'abc'",
+      "reference_output": "'abc'",
+      "actual": "'abc'",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 2, 6],
+      "covers": [[1, 2, 6]]
+    },
+    {
+      "id": 2,
+      "input": ["'hello'", "'e'"],
+      "expected": "'hllo'",
+      "reference_output": "'hllo'",
+      "actual": "'hllo'",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 3, 4, 6],
+      "covers": [[1, 3, 4, 6]]
+    },
+    {
+      "id": 3,
+      "input": ["'abcda'", "'a'"],
+      "expected": "'bcd'",
+      "reference_output": "'bcd'",
+      "actual": "'bcd'",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 3, 5, 6],
+      "covers": [[1, 3, 5, 6]]
+    }
+  ]
+}

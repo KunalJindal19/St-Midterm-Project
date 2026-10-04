@@ -1,0 +1,7 @@
+{
+  "task_id": 13,
+  "function": "count_common(words)",
+  "coverage_criterion": "Prime Path Coverage",
+  "verdict": "NOT RUN",
+  "error": "Test generation failed: All models failed. Last error: Model nvidia/nemotron-3-ultra-550b-a55b:free: response truncated at max_tokens (4096)"
+}
