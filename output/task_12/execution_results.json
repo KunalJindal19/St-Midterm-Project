@@ -1,0 +1,130 @@
+{
+  "task_id": 12,
+  "function": "sort_matrix(M)",
+  "coverage_criterion": "Prime Path Coverage",
+  "verdict": "PASS",
+  "summary": {
+    "total": 9,
+    "passed": 8,
+    "failed": 0,
+    "errors": 0,
+    "timeouts": 0,
+    "invalid": 1
+  },
+  "coverage": {
+    "target_criterion": "Prime Path Coverage",
+    "criterion_met": true,
+    "node": "2/2 (100.0%)",
+    "edge": "1/1 (100.0%)",
+    "edge_pair": "1/1 (100.0%)",
+    "prime_path": "1/1 (100.0%)",
+    "cfg": {
+      "nodes": {
+        "1": "lines 2-4: def row_sum(row):; return sorted(M, key=row_sum)",
+        "2": "exit"
+      },
+      "edges": [[1, 2]],
+      "initial_node": 1,
+      "final_node": 2
+    }
+  },
+  "test_cases": [
+    {
+      "id": 1,
+      "input": ["[[1, 2, 3], [2, 4, 5], [1, 1, 1]]"],
+      "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
+      "reference_output": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
+      "actual": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 2],
+      "covers": [[1, 2]]
+    },
+    {
+      "id": 2,
+      "input": ["[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]"],
+      "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]",
+      "reference_output": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]",
+      "actual": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 2],
+      "covers": [[1, 2]]
+    },
+    {
+      "id": 3,
+      "input": ["[[5, 8, 9], [6, 4, 3], [2, 1, 4]]"],
+      "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]",
+      "reference_output": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]",
+      "actual": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 2],
+      "covers": [[1, 2]]
+    },
+    {
+      "id": 4,
+      "input": ["[[]]"],
+      "expected": "[[]]",
+      "reference_output": "[[]]",
+      "actual": "[[]]",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 2],
+      "covers": [[1, 2]]
+    },
+    {
+      "id": 5,
+      "input": "[[]<, []]",
+      "expected": "[[], []]",
+      "reference_output": null,
+      "actual": null,
+      "verdict": "INVALID TEST",
+      "error": "Parse error: arguments: SyntaxError: invalid syntax (<unknown>, line 1)"
+    },
+    {
+      "id": 6,
+      "input": ["[[1]]"],
+      "expected": "[[1]]",
+      "reference_output": "[[1]]",
+      "actual": "[[1]]",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 2],
+      "covers": [[1, 2]]
+    },
+    {
+      "id": 7,
+      "input": ["[[-1], [0], [1]]"],
+      "expected": "[[-1], [0], [1]]",
+      "reference_output": "[[-1], [0], [1]]",
+      "actual": "[[-1], [0], [1]]",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 2],
+      "covers": [[1, 2]]
+    },
+    {
+      "id": 8,
+      "input": ["[[1, 1], [1, 1]]"],
+      "expected": "[[1, 1], [1, 1]]",
+      "reference_output": "[[1, 1], [1, 1]]",
+      "actual": "[[1, 1], [1, 1]]",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 2],
+      "covers": [[1, 2]]
+    },
+    {
+      "id": 9,
+      "input": ["[[10, -5], [0, 0], [1, 2]]"],
+      "expected": "[[0, 0], [1, 2], [10, -5]]",
+      "reference_output": "[[0, 0], [1, 2], [10, -5]]",
+      "actual": "[[0, 0], [1, 2], [10, -5]]",
+      "verdict": "PASS",
+      "error": null,
+      "path": [1, 2],
+      "covers": [[1, 2]]
+    }
+  ]
+}

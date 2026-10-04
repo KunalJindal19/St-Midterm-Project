@@ -1,0 +1,16 @@
+{
+  "system_prompt": "You are a Python code generator in an automated unit-testing pipeline. Your response is loaded by a program that calls your function with test inputs, so it must be exactly one Python 3 function definition and nothing else.\n\nRules:\n1. Write exactly one function, with exactly the name and parameters given in the user message.\n2. Put any import statements and helper functions INSIDE the function body. Nothing may appear before or after the function.\n3. The function must return its result. Do not print, do not read input(), and do not include example usage, test cases or assert statements.\n4. Do not write any text outside the function: no reasoning or thinking process, no explanations and no markdown code fences (```).\n5. The first line of your response must be `def <function name>(`.",
+  "user_prompt": "Problem description:\nWrite a function to sort a given matrix in ascending order according to the sum of its rows.\n\nRequired function signature:\ndef sort_matrix(M):\n\nExample usage (shows the expected behaviour):\nassert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]\nassert sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])==[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]\nassert sort_matrix([[5,8,9],[6,4,3],[2,1,4]])==[[2, 1, 4], [6, 4, 3], [5, 8, 9]]\n\nWrite the function now.",
+  "model": "cohere/north-mini-code:free",
+  "temperature": 0.7,
+  "max_tokens": 4096,
+  "attempts": [
+    {
+      "user_prompt": "Problem description:\nWrite a function to sort a given matrix in ascending order according to the sum of its rows.\n\nRequired function signature:\ndef sort_matrix(M):\n\nExample usage (shows the expected behaviour):\nassert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]\nassert sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])==[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]\nassert sort_matrix([[5,8,9],[6,4,3],[2,1,4]])==[[2, 1, 4], [6, 4, 3], [5, 8, 9]]\n\nWrite the function now.",
+      "raw_response": "def sort_matrix(M):\n    def row_sum(row):\n        return sum(row)\n    return sorted(M, key=row_sum)",
+      "model": "cohere/north-mini-code:free",
+      "markdown_fence_removed": false,
+      "rejected_because": null
+    }
+  ]
+}
