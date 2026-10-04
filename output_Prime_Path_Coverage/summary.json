@@ -1,0 +1,42 @@
+{
+  "config": {
+    "model": "cohere/north-mini-code:free",
+    "fallback_models": [
+      "cohere/north-mini-code:free",
+      "google/gemma-4-31b-it:free",
+      "google/gemma-4-26b-a4b-it:free",
+      "qwen/qwen3.8-27b:free",
+      "nvidia/nemotron-3.5-lightning:free",
+      "nvidia/nemotron-3-ultra-550b-a55b:free"
+    ],
+    "temperature": 0.7,
+    "max_tokens": 4096,
+    "coverage_criterion": "Prime Path Coverage",
+    "num_problems": 2,
+    "timeout_seconds_per_test": 10,
+    "dataset": "mbpp (test split)"
+  },
+  "total_problems": 2,
+  "counts": {
+    "code_generation_failed": 0,
+    "test_generation_failed": 0,
+    "verdicts": {
+      "PASS": 2,
+      "FAIL": 0,
+      "ERROR": 0,
+      "TIME LIMIT EXCEEDED": 0,
+      "INVALID TEST": 0
+    },
+    "coverage_criterion_met": 2,
+    "coverage_criterion_not_met": 0,
+    "test_cases": {
+      "total": 12,
+      "passed": 11,
+      "failed": 0,
+      "errors": 0,
+      "timeouts": 0,
+      "invalid": 1
+    }
+  },
+  "total_time_seconds": 101.2
+}

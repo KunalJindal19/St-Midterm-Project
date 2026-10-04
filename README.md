@@ -2,10 +2,14 @@
 
 **CSE731: Software Testing — Mid-term Project**
 
+Repository: https://github.com/KunalJindal19/St-Midterm-Project
+
 ## Quick Start
 
-### 1. Install dependencies
+### 1. Clone the repository and install dependencies
 ```bash
+git clone https://github.com/KunalJindal19/St-Midterm-Project.git
+cd St-Midterm-Project
 pip install -r requirements.txt
 ```
 

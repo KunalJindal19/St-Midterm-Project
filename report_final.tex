@@ -82,6 +82,9 @@
         Kunal Jindal & IMT2023049 \\
         \bottomrule
     \end{tabular}
+    \vspace{1.5cm}
+
+    {\normalsize Source code: \url{https://github.com/KunalJindal19/St-Midterm-Project}\par}
     \vfill
     {\large October 2026\par}
 \end{titlepage}
@@ -102,6 +105,8 @@ The objective of the project is to construct, from first principles, an agentic 
 \paragraph{Test requirement.} The assignment admits three kinds of test requirement. This project implements \textbf{requirement (1), a user-specified coverage criterion}. The user selects one of four graph coverage criteria defined on the control flow graph (CFG) of the generated function: node, edge, edge-pair or prime path coverage. Prime path coverage is the default.
 
 \paragraph{Design constraints.} The pipeline is implemented in plain Python. It does not use retrieval-augmented generation, chain-of-thought prompting or agent frameworks such as LangGraph. Each LLM agent issues a single request consisting of one system message and one user message, and the prompts explicitly forbid the model from presenting its reasoning. The agents are sequenced by ordinary Python control flow.
+
+\paragraph{Source code.} The complete implementation, including the prompts, the command-line interface and the output of the runs reported here, is available in the repository \url{https://github.com/KunalJindal19/St-Midterm-Project}. Instructions for installation and use are given in its \texttt{README.md}.
 
 \paragraph{Structure of the report.} The report follows the five items required by the assignment: the pipeline and the dataset (Section~\ref{sec:pipeline}), the prompts and settings (Section~\ref{sec:prompts}), the formats of the generated code, test cases and verdicts with actual examples (Section~\ref{sec:formats}), the execution results (Section~\ref{sec:results}) and the contribution of each member (Section~\ref{sec:contrib}). Observations and conclusions are given in Sections~\ref{sec:observations} and~\ref{sec:conclusion}.
 
@@ -620,7 +625,7 @@ The final run processed the first two problems of the MBPP test split (tasks 11 
         Invalid test cases & 1 \\
         \bottomrule
     \end{tabular}
-    \caption{Summary of the final run (\texttt{output/summary.json})}
+    \caption{Summary of the final run (\texttt{output\_Prime\_Path\_Coverage/summary.json})}
     \label{tab:summary}
 \end{table}
 
@@ -792,7 +797,7 @@ Both generated functions were compared with their reference solutions on 20,000 
 
 \subsection{Results for All Criteria}
 
-Each criterion was also selected in a separate run of the pipeline. Table~\ref{tab:allcriteria} summarises the four runs; the results of each run are stored in its own output directory. The node and edge coverage runs processed task 11 only, while the edge-pair and prime path coverage runs processed tasks 11 and 12.
+Each criterion was also selected in a separate run of the pipeline. Table~\ref{tab:allcriteria} summarises the four runs. The results of each run are stored in the repository in a directory of its own (\texttt{output\_Node\_Coverage}, \texttt{output\_Edge\_Coverage}, \texttt{output\_Edge\_Pair\_Coverage} and \texttt{output\_Prime\_Path\_Coverage}). The node and edge coverage runs processed task 11 only, while the edge-pair and prime path coverage runs processed tasks 11 and 12.
 
 \begin{table}[H]
     \centering
