@@ -1,0 +1,1 @@
+<OPEN>"hello"$"x"<CLOSE><OPEN>"hello"<CLOSE><OPEN>"abc"$"b"<CLOSE><OPEN>"ac"<CLOSE><OPEN>"hello"$"l"<CLOSE><OPEN>"heo"<CLOSE><OPEN>"PHP"$"P"<CLOSE><OPEN>"H"<CLOSE>

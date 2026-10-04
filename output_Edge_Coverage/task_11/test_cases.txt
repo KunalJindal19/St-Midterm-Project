@@ -1,0 +1,1 @@
+<OPEN>"hello"$"x"<CLOSE><OPEN>"hello"<CLOSE><OPEN>"abcda"$"a"<CLOSE><OPEN>"bcd"<CLOSE><OPEN>"hello"$"e"<CLOSE><OPEN>"hllo"<CLOSE><OPEN>"hello"$"l"<CLOSE><OPEN>"heo"<CLOSE><OPEN>""$"a"<CLOSE><OPEN>""<CLOSE><OPEN>"aa"$"a"<CLOSE><OPEN>""<CLOSE><OPEN>"aaa"$"a"<CLOSE><OPEN>"a"<CLOSE><OPEN>"PHP"$"P"<CLOSE><OPEN>"H"<CLOSE>

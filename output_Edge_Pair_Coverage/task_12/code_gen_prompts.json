@@ -7,7 +7,7 @@
   "attempts": [
     {
       "user_prompt": "Problem description:\nWrite a function to sort a given matrix in ascending order according to the sum of its rows.\n\nRequired function signature:\ndef sort_matrix(M):\n\nExample usage (shows the expected behaviour):\nassert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]\nassert sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])==[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]\nassert sort_matrix([[5,8,9],[6,4,3],[2,1,4]])==[[2, 1, 4], [6, 4, 3], [5, 8, 9]]\n\nWrite the function now.",
-      "raw_response": "def sort_matrix(M):\n    def row_sum(row):\n        return sum(row)\n    return sorted(M, key=row_sum)",
+      "raw_response": "def sort_matrix(M):\n    return sorted(M, key=sum)",
       "model": "cohere/north-mini-code:free",
       "markdown_fence_removed": false,
       "rejected_because": null

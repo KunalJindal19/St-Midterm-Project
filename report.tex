@@ -332,7 +332,7 @@ Only the \texttt{TEST REQUIREMENT} block changes with the user's choice. Every c
     \caption{Test requirement per coverage criterion}
 \end{table}
 
-These criteria form the standard subsumption hierarchy of graph coverage: Prime Path $\Rightarrow$ Edge-Pair $\Rightarrow$ Edge $\Rightarrow$ Node.
+In the subsumption hierarchy of graph coverage, Prime Path and Edge-Pair coverage both subsume Edge coverage, which subsumes Node coverage; Prime Path coverage does \emph{not} subsume Edge-Pair coverage. For example, if a node $b$ with predecessor $a$ has a self-loop, the edge pair $[a, b, b]$ is required by Edge-Pair coverage but is not a simple path, so Prime Path coverage does not require it.
 
 \subsubsection{User Prompt}
 
